@@ -76,7 +76,18 @@ public class EvaluationOfExpressions {
         int op1 = operandStack.pop();
         int op2 = operandStack.pop();
         switch(op){
-            
+            case '+':
+                operandStack.push(op2 + op1);
+                break;
+            case '-':
+                operandStack.push(op2 - op1);
+                break;
+            case '*':
+                operandStack.push(op2 * op1);
+                break;
+            case '/':
+                operandStack.push(op2 / op1);
+                break;
         }
     }
     

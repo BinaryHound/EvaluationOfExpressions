@@ -17,7 +17,7 @@ public class EvaluationOfExpressions {
             System.exit(1);
         }
         try {
-            
+            System.out.println(evaluateExpression(args[0]));
         } catch(Exception ex){
             System.out.println("Wrong Expressions: " + args[0]);
         }

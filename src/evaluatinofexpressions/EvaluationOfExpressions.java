@@ -25,6 +25,34 @@ public class EvaluationOfExpressions {
     
     //Main Expression Handling method.
     public static int evaluateExpression(String expression){
+        //Values of the numbers.
+        Stack<Integer> operandStack = new Stack<>();
+        //Values of +, -, *, or /.
+        Stack<Character> operatorStack = new Stack<>();
+        
+        //Preparation for extraction of operands.
+        expression = insertBlanks(expression);
+        
+        
+        
         return 1;
     }
+    
+    
+    public static String insertBlanks(String s){
+        
+        String result = "";
+        
+        for(int i = 0; i < s.length(); i++){
+            if(s.charAt(i) == '(' || s.charAt(i) == ')' ||
+               s.charAt(i) == '+' || s.charAt(i) == '-' ||
+               s.charAt(i) == '/' || s.charAt(i) == '*'){
+                result += " " + s.charAt(i) + " ";
+            } else {
+                result += s.charAt(i);
+            }
+        }
+        return result;
+    }
+    
 }
